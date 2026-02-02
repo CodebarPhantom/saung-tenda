@@ -56,7 +56,7 @@ const umkmData = {
     },
     {
       name: "Es Jeruk",
-      price: 8000,
+      price: 7000,
       description: "Minuman segar untuk teman makan"
     },
     {
