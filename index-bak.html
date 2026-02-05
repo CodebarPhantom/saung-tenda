@@ -164,7 +164,7 @@
         <section class="gallery-showcase section" aria-labelledby="gallery-heading">
             <div class="container">
                 <h2 id="gallery-heading">Sertifikat</h2>
-                <div class="gallery-grid gallery-1" role="list" aria-label="Business gallery images">
+                <div class="gallery-grid" role="list" aria-label="Business gallery images">
                     <div class="gallery-item" role="button" tabindex="0" aria-label="View image: UmrahBISA Karawang - Sertifikat Akreditasi A">
                         <img src="./assets/umrah-bisa-karawang-sertifikat.jpeg" alt="UmrahBISA Karawang - Sertifikat Akreditasi A" loading="lazy">
                     </div>
@@ -174,7 +174,7 @@
 
         <section class="quick-info section-alt" aria-labelledby="quick-info-heading">
             <div class="container">
-                <h2 id="quick-info-heading">Informasi Cepat</h2>
+                <!-- <h2 id="quick-info-heading">Informasi Cepat</h2> -->
                 <div class="info-grid" role="list" aria-label="Quick business information">
                     <article class="info-item" role="listitem">
                         <div class="icon" aria-hidden="true">🕒</div>
@@ -194,7 +194,7 @@
                     <article class="info-item" role="listitem">
                         <div class="icon" aria-hidden="true">💳</div>
                         <h3>Pembayaran</h3>
-                        <p>Cash & Transfer</p>
+                        <p>Cash, QRIS</p>
                     </article>
                 </div>
             </div>
@@ -262,7 +262,7 @@
     <footer class="footer" role="contentinfo">
         <div class="container">
             <h3>UmrahBISA Karawang</h3>
-            <p class="contact-info">WhatsApp: +62 822-3961-9095</p>
+            <p class="contact-info">WhatsApp: +62 822 3961 9095</p>
             <p>UmrahBISA Karawang melayani perjalanan umrah dengan berbagai pilihan paket, fokus pada kemudahan, transparansi, dan pelayanan amanah.</p>
             <p class="copyright">© 2024 UmrahBISA Karawang. Dibuat dengan ❤️ untuk UMKM Indonesia.</p>
         </div>
@@ -290,6 +290,9 @@
         </div>
     </div>
 
+    <!-- Load business data -->
+    <script src="./data.js"></script>
+    
     <script>
         // Lightbox Controller Implementation
         class LightboxController {
@@ -453,52 +456,69 @@
             }
         }
         
-        // Static Gallery Integration (no data.js needed)
-        function initializeStaticGallery() {
-            const galleryItems = document.querySelectorAll('.gallery-item');
+        // Gallery Rendering and Integration
+        function renderGallery() {
+            const gallerySection = document.querySelector('.gallery-showcase');
+            const galleryGrid = document.querySelector('.gallery-grid');
             
-            if (galleryItems.length === 0) {
-                // Hide gallery section if no items
-                const gallerySection = document.querySelector('.gallery-showcase');
-                if (gallerySection) {
-                    gallerySection.classList.add('hidden');
-                }
+            if (!window.umkmData || !window.umkmData.gallery || window.umkmData.gallery.length === 0) {
+                gallerySection.classList.add('hidden');
                 return;
             }
             
-            // Collect gallery data from existing HTML
-            const galleryImages = Array.from(galleryItems).map((item, index) => {
-                const img = item.querySelector('img');
-                return {
-                    url: img.src,
-                    alt: img.alt || `Gallery image ${index + 1}`
-                };
-            });
+            const gallery = window.umkmData.gallery;
+            gallerySection.classList.remove('hidden');
             
-            // Add click events to existing gallery items
-            galleryItems.forEach((item, index) => {
+            // Set grid class based on number of images
+            galleryGrid.className = `gallery-grid gallery-${gallery.length}`;
+            
+            // Clear existing content
+            galleryGrid.innerHTML = '';
+            
+            // Create gallery items
+            gallery.forEach((image, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.setAttribute('role', 'button');
+                galleryItem.setAttribute('tabindex', '0');
+                galleryItem.setAttribute('aria-label', `View image: ${image.alt || `Gallery image ${index + 1}`}`);
+                
+                const img = document.createElement('img');
+                img.src = image.url;
+                img.alt = image.alt || `Gallery image ${index + 1}`;
+                img.loading = 'lazy';
+                
+                galleryItem.appendChild(img);
+                
                 // Click event to open lightbox
-                item.addEventListener('click', () => {
-                    lightboxController.openLightbox(index, galleryImages);
+                galleryItem.addEventListener('click', () => {
+                    lightboxController.openLightbox(index, gallery);
                 });
                 
                 // Keyboard support for gallery items
-                item.addEventListener('keydown', (e) => {
+                galleryItem.addEventListener('keydown', (e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
-                        lightboxController.openLightbox(index, galleryImages);
+                        lightboxController.openLightbox(index, gallery);
                     }
                 });
+                
+                galleryGrid.appendChild(galleryItem);
             });
         }
         
         // Initialize lightbox controller
         const lightboxController = new LightboxController();
         
-        // Initialize static gallery when DOM is loaded
+        // Initialize gallery when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            initializeStaticGallery();
+            renderGallery();
         });
+        
+        // Re-render gallery if data changes (for dynamic updates)
+        if (window.umkmData) {
+            renderGallery();
+        }
     </script>
 </body>
 </html>
