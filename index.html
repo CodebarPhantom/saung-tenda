@@ -16,6 +16,8 @@
     <meta name="twitter:description" content="Nikmati ayam &amp; ikan nila bakar sambal cobek di Saung Tenda Karawang. Harga berkisar Rp22.500 - 33.500. Pesan langsung via WhatsApp!">
     <meta name="twitter:image" content="https://saungtendakarawang.pages.dev/assets/facade.jpeg">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
     <style>
         /* Optimized CSS - Minified for performance */
         *{margin:0;padding:0;box-sizing:border-box}
@@ -59,7 +61,7 @@
         .advantages-list li::before{content:"✓";position:absolute;left:var(--space);top:var(--space);color:var(--primary);font-weight:bold;font-size:1.2rem}
         .gallery-showcase{display:block}
         .gallery-showcase.hidden{display:none}
-        .gallery-grid{display:grid;gap:var(--space);margin-top:var(--space-lg);grid-template-columns:1fr}
+        .gallery-grid{display:grid;gap:var(--space);margin-top:var(--space-lg)}
         .gallery-grid.gallery-1{grid-template-columns:1fr;justify-items:center;max-width:600px;margin-left:auto;margin-right:auto}
         .gallery-grid.gallery-2{grid-template-columns:1fr 1fr}
         .gallery-grid.gallery-3{grid-template-columns:1fr 1fr 1fr}
@@ -94,9 +96,15 @@
         .btn:focus,a:focus{outline:2px solid #4285f4;outline-offset:2px}
         
         /* Gallery responsive adjustments */
-        @media (max-width:767px){.gallery-grid.gallery-2,.gallery-grid.gallery-3{grid-template-columns:1fr;gap:var(--space)}.gallery-grid.gallery-1{max-width:100%}}
-        @media (min-width:768px){.gallery-grid{gap:var(--space-lg)}.gallery-grid.gallery-1{max-width:600px;margin-left:auto;margin-right:auto}.gallery-grid.gallery-2{grid-template-columns:1fr 1fr}.gallery-grid.gallery-3{grid-template-columns:1fr 1fr 1fr}}
-        @media (min-width:1024px){.gallery-grid{gap:var(--space-lg)}.gallery-grid.gallery-1{max-width:800px}.gallery-item:hover{transform:translateY(-6px);box-shadow:0 6px 25px var(--shadow-md)}}
+        @media (min-width:768px){
+            .gallery-grid{gap:var(--space-lg)}
+            .gallery-grid.gallery-1{max-width:600px}
+        }
+        @media (min-width:1024px){
+            .gallery-grid{gap:var(--space-lg)}
+            .gallery-grid.gallery-1{max-width:800px}
+            .gallery-item:hover{transform:translateY(-6px);box-shadow:0 6px 25px var(--shadow-md)}
+        }
         
         /* Lightbox Modal Styles */
         .lightbox-modal{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;display:none;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s ease;background:rgba(0,0,0,0.9)}
@@ -122,9 +130,9 @@
             .lightbox-container{max-width:95vw;max-height:95vh}
             .lightbox-image{max-height:calc(95vh - 80px)}
             .lightbox-close{top:-40px;right:0;width:40px;height:40px;font-size:1.3rem}
-            .lightbox-nav{width:44px;height:44px;font-size:1.5rem}
-            .lightbox-prev{left:-50px}
-            .lightbox-next{right:-50px}
+            .lightbox-nav{width:44px;height:44px;font-size:1.5rem;background:rgba(0,0,0,0.8)}
+            .lightbox-prev{left:10px}
+            .lightbox-next{right:10px}
             .lightbox-counter{font-size:0.8rem;padding:var(--space-sm)}
         }
         
@@ -132,9 +140,9 @@
             .lightbox-container{max-width:98vw;max-height:98vh}
             .lightbox-image{max-height:calc(98vh - 100px)}
             .lightbox-close{top:-35px;right:5px;width:36px;height:36px;font-size:1.2rem}
-            .lightbox-nav{width:40px;height:40px;font-size:1.3rem}
-            .lightbox-prev{left:-45px}
-            .lightbox-next{right:-45px}
+            .lightbox-nav{width:44px;height:44px;font-size:1.3rem}
+            .lightbox-prev{left:5px}
+            .lightbox-next{right:5px}
         }
         
         /* Ensure lightbox is above all other content */
@@ -152,10 +160,10 @@
         <div class="container">
             <h1>Saung Tenda Ayam &amp; Ikan Nila</h1>
             <p class="tagline">Ayam &amp; Ikan Nila Bakar Cobek • Warung Kuliner Karawang</p>
-            <p class="location">📍 Jl. Panatayuda I, Nagasari, Kec. Karawang Bar., Karawang, Jawa Barat 41314</p>
+            <p class="location"><i class="bi-geo-alt"></i> Jl. Panatayuda I, Nagasari, Kec. Karawang Bar., Karawang, Jawa Barat 41314</p>
             <nav class="buttons" aria-label="Primary actions">
-                <a href="https://wa.me/6282111688929?text=Assalamu%E2%80%99alaikum%2C%20mau%20pesan%20ayam%2Fikan%20bakar." class="btn btn-primary btn-large" target="_blank" aria-label="Contact via WhatsApp">📱 Pesan via WhatsApp</a>
-                <a href="https://maps.google.com/maps?q=Saung+Tenda+Ayam+%26+Ikan+Nila+Panatayudha+2+Karawang" class="btn btn-secondary" target="_blank" aria-label="View location on Google Maps">📍 Lihat di Google Maps</a>
+                <a href="https://wa.me/6282111688929?text=Assalamu%E2%80%99alaikum%2C%20mau%20pesan%20ayam%2Fikan%20bakar." class="btn btn-primary btn-large" target="_blank" aria-label="Contact via WhatsApp"><i class="bi-whatsapp"></i> Pesan via WhatsApp</a>
+                <a href="https://maps.google.com/maps?q=Saung+Tenda+Ayam+%26+Ikan+Nila+Panatayudha+2+Karawang" class="btn btn-secondary" target="_blank" aria-label="View location on Google Maps"><i class="bi-geo-alt"></i> Lihat di Google Maps</a>
             </nav>
         </div>
     </header>
@@ -183,22 +191,22 @@
                 <h2 id="quick-info-heading">Informasi Usaha</h2>
                 <div class="info-grid" role="list" aria-label="Quick business information">
                     <article class="info-item" role="listitem">
-                        <div class="icon" aria-hidden="true">🕒</div>
+                        <i class="bi-clock icon" aria-hidden="true"></i>
                         <h3>Jam Buka</h3>
                         <p>Senin – Sabtu: 10:00 – 16:00</p>
                     </article>
                     <article class="info-item" role="listitem">
-                        <div class="icon" aria-hidden="true">💰</div>
+                        <i class="bi-cash-coin icon" aria-hidden="true"></i>
                         <h3>Harga</h3>
                         <p>Harga Rp 23.000 – Rp 35.000</p>
                     </article>
                     <article class="info-item" role="listitem">
-                        <div class="icon" aria-hidden="true">🍽️</div>
+                        <i class="bi-shop icon" aria-hidden="true"></i>
                         <h3>Layanan</h3>
                         <p>Dine-in & Take Away & Delivery</p>
                     </article>
                     <article class="info-item" role="listitem">
-                        <div class="icon" aria-hidden="true">💳</div>
+                        <i class="bi-credit-card icon" aria-hidden="true"></i>
                         <h3>Pembayaran</h3>
                         <p>Cash, QRIS, GoPay, OVO, ShopeePay</p>
                     </article>
@@ -261,9 +269,9 @@
                 <h2 id="location-heading">Lokasi Kami</h2>
                 <div class="location-content">
                     <address class="address">
-                        <h3>📍 Alamat Lengkap</h3>
+                        <h3><i class="bi-geo-alt"></i> Alamat Lengkap</h3>
                         <p>Jl. Panatayuda I, Nagasari, Kec. Karawang Bar., Karawang, Jawa Barat 41314</p>
-                        <p>Dekat Sop Janda, Karawang Barat. Parkir motor & mobil tersedia di depan warung</p>
+                        <p>Dekat Sop Janda, Karawang Barat. Parkir motor &amp; mobil tersedia di depan warung</p>
                     </address>
                     <div class="maps-container">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.679135902015!2d107.30081057457635!3d-6.305820061711298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6977c2fff00141%3A0x16a9478a4415bcbf!2sSaung%20Tenda%20Ayam%20%26%20Ikan%20Nila%20(Bakar%20-%20Cobek)%20-%20Depan%20Sop%20Janda!5e0!3m2!1sen!2sid!4v1770024866086!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Bisnis" aria-label="Google Maps showing business location"></iframe>
@@ -276,7 +284,7 @@
             <div class="container">
                 <h2 id="cta-heading">Siap Menikmati Masakan Lezat?</h2>
                 <p>Jangan tunggu lagi! Hubungi kami sekarang untuk memesan atau bertanya tentang menu hari ini.</p>
-                <a href="https://wa.me/6282111688929?text=Halo!%20Saya%20mau%20info%20menu%20dan%20order%20ayam%2Fikan%20bakar." class="btn btn-primary btn-large" target="_blank" aria-label="Contact us via WhatsApp">📱 Hubungi Sekarang via WhatsApp</a>
+                <a href="https://wa.me/6282111688929?text=Assalamu%E2%80%99alaikum%2C%20Saya%20mau%20info%20menu%20dan%20order%20ayam%2Fikan%20bakar." class="btn btn-primary btn-large" target="_blank" aria-label="Contact us via WhatsApp"><i class="bi-whatsapp"></i> Hubungi Sekarang via WhatsApp</a>
             </div>
         </section>
     </main>
@@ -285,7 +293,7 @@
         <div class="container">
             <h3>Saung Tenda Ayam &amp; Ikan Nila</h3>
             <p class="contact-info">WhatsApp: +62 821-1168-8929</p>
-            <p>Warung kuliner sederhana di Panatayudha 1, Karawang Barat – buka setiap senin - sabtu dari pagi sampai sore.</p>
+            <p>Saung Tenda, warung ayam dan ikan nila bakar sambal cobek khas Karawang, tempat makan santai dengan rasa rumahan dan harga bersahabat</p>
             <p class="copyright">© 2026 Saung Tenda Ayam &amp; Ikan Nila. Dibuat dengan ❤️ untuk UMKM Indonesia.</p>
         </div>
     </footer>
