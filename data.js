@@ -1,6 +1,6 @@
 /**
  * UMKM Landing Page Data Configuration - Saung Tenda Ayam & Ikan Nila
- * 
+ *
  * Contoh implementasi untuk bisnis Saung Tenda Ayam & Ikan Nila (Bakar - Cobek)
  * Ganti nama file ini menjadi data.js untuk menggunakan data ini
  */
@@ -31,6 +31,21 @@ const umkmData = {
     address: "Jl. Panatayuda I, Nagasari, Kec. Karawang Bar., Karawang, Jawa Barat 41314" 
   },
 
+  // Gallery Images (1-3 images supported)
+  gallery: [
+    {
+      url: './assets/saung-tenda-0.jpeg',
+      alt: 'Saung Tenda Karawang - Banner',
+    },
+    {
+      url: './assets/saung-tenda-1.jpeg',
+      alt: 'Saung Tenda Karawang - Ayam Ikan Bakar',
+    },
+    {
+      url: './assets/saung-tenda-2.jpeg',
+      alt: 'Saung Tenda Karawang - Ikan Cobek',
+    }
+  ],
 
   // Menu Items (Menu unggulan)
   menu: [
