@@ -8,108 +8,98 @@
 const umkmData = {
   // Business Information
   business: {
-    name: "Saung Tenda Ayam & Ikan Nila",
-    tagline: "Ayam & Ikan Nila Bakar Cobek • Warung Kuliner Karawang",
-    openingHours: "Senin – Sabtu: 10:00 – 16:00",
-    priceRange: "Harga Rp 23.000 – Rp 35.000",
+    name: 'CCTV Murah AdfuShop Bekasi',
+    tagline: 'Solusi CCTV Murah & Setting Pemasangan di Bekasi',
+    openingHours: 'Senin – Sabtu: 10:00 – 16:00',
+    priceRange: 'Harga mulai dari paket CCTV terjangkau',
     advantages: [
-      "Ayam & ikan nila bakar segar",
-      "Sambal cobek khas warung",
-      "Harga ramah kantong",
-      "Suasana santai khas karawang"
+      'Kamera CCTV & perangkat keamanan berkualitas',
+      'Layanan instalasi & setting perekaman',
+      'Support teknis & bantuan konfigurasi',
+      'Solusi pengawasan untuk rumah, toko, & usaha',
     ],
-    footerDescription: "Warung kuliner sederhana di Panatayudha 1, Karawang Barat – buka setiap senin - sabtu dari pagi sampai sore."
+    footerDescription: 'CCTVMurahAdfuShop adalah penyedia CCTV dan layanan pemasangan di Bekasi, siap membantu pengadaan kamera pengawas sampai setup penuh.',
   },
 
   // Contact Information
   contact: {
-    whatsapp: "6282111688929", // GANTI dengan nomor WhatsApp aktif
-    whatsappMessage: "Assalamu’alaikum, mau pesan ayam/ikan bakar.",
-    whatsappCTAMessage: "Halo! Saya mau info menu dan order ayam/ikan bakar.",
-    mapsUrl: "https://maps.google.com/maps?q=Saung+Tenda+Ayam+%26+Ikan+Nila+Panatayudha+2+Karawang", 
-    mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.679135902015!2d107.30081057457635!3d-6.305820061711298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6977c2fff00141%3A0x16a9478a4415bcbf!2sSaung%20Tenda%20Ayam%20%26%20Ikan%20Nila%20(Bakar%20-%20Cobek)%20-%20Depan%20Sop%20Janda!5e0!3m2!1sen!2sid!4v1770024866086!5m2!1sen!2sid", 
-    address: "Jl. Panatayuda I, Nagasari, Kec. Karawang Bar., Karawang, Jawa Barat 41314" 
+    whatsapp: '6287776663940', // GANTI dengan nomor WhatsApp aktif
+    whatsappMessage: 'Halo, saya mau info CCTV & jasa pemasangan.',
+    whatsappCTAMessage: 'Halo, saya mau konsultasi soal paket CCTV murah & pemasangan.',
+    mapsUrl: 'https://maps.app.goo.gl/zUq2epgvVH6vijtGA',
+    mapsEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8032.169135696881!2d107.08252249615602!3d-6.4116190622875235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699793f5a6a4fb%3A0xbcbceef13f6a7cdf!2sAdfushop%20Office!5e0!3m2!1sen!2sid!4v1770434346757!5m2!1sen!2sid',
+    address: 'Bumi Cahaya Residence, Blok A13 No. 9C Sindangmulya, Kecamatan Cibarusah Kabupaten Bekasi, Jawa Barat 17530',
   },
 
   // Gallery Images (1-3 images supported)
   gallery: [
     {
-      url: './assets/saung-tenda-0.jpeg',
-      alt: 'Saung Tenda Karawang - Banner',
+      url: './assets/cctvmurahadfushop-0.jpeg',
+      alt: 'Toko CCTV Murah ADFU Shop di Cibarusah Bekasi',
     },
     {
-      url: './assets/saung-tenda-1.jpeg',
-      alt: 'Saung Tenda Karawang - Ayam Ikan Bakar',
+      url: './assets/cctvmurahadfushop-1.jpeg',
+      alt: 'Contoh hasil pemasangan CCTV rumah dan toko oleh ADFU Shop',
     },
     {
-      url: './assets/saung-tenda-2.jpeg',
-      alt: 'Saung Tenda Karawang - Ikan Cobek',
-    }
+      url: './assets/cctvmurahadfushop-2.jpeg',
+      alt: 'Perangkat CCTV dan aksesoris keamanan di ADFU Shop',
+    },
   ],
 
   // Menu Items (Menu unggulan)
   menu: [
     {
-      name: "Paket Ayam Bakar Nasi + Sambal + Lalapan",
-      price: 23000,
-      description: "Paket ayam bakar dengan nasi, sambal cobek dan lalapan" 
+      name: 'Paket CCTV Rumah',
+      description: 'Paket pemasangan CCTV untuk rumah tinggal, cocok untuk keamanan harian dengan hasil gambar jernih dan monitoring mudah.',
     },
     {
-      name: "Paket Ikan Nila Bakar Nasi + Sambal + Lalapan",
-      price: 27000,
-      description: "Paket ikan nila bakar lengkap nasi, sambal cobek dan lalapan"
+      name: 'Paket CCTV Toko / UMKM',
+      description: 'Solusi CCTV untuk toko, warung, dan usaha kecil agar aktivitas lebih terpantau dan aman.',
     },
     {
-      name: "Ayam Bakar aja",
-      price: 18000,
-      description: "Ayam bakar dengan sambal & lalapan"
+      name: 'Paket CCTV Kantor',
+      description: 'Paket CCTV untuk kebutuhan kantor, gudang, atau ruang kerja dengan sistem yang rapi dan profesional.',
     },
     {
-      name: "Ikan Nila Bakar aja",
-      price: 22000,
-      description: "Ikan nila bakar dengan sambal & lalapan"
+      name: 'Pemasangan & Setting CCTV',
+      description: 'Jasa pemasangan, penarikan kabel, setting DVR/NVR, serta konfigurasi CCTV agar siap digunakan.',
     },
     {
-      name: "Es Jeruk",
-      price: 7000,
-      description: "Minuman segar untuk teman makan"
+      name: 'Service & Upgrade CCTV',
+      description: 'Perbaikan CCTV bermasalah, penggantian kamera, upgrade sistem, dan pengecekan instalasi.',
     },
     {
-      name: "Tahu / Tempe",
-      price: 1000,
-      description: "Tambahan protein"
-    }
+      name: 'Laptop Bekas Berkualitas',
+      description: 'Tersedia laptop bekas layak pakai untuk kerja, sekolah, dan kebutuhan harian (stok terbatas).',
+    },
   ],
 
-  // Social Media & SEO Metadata
+  // Visual Assets
   meta: {
-    title: "Saung Tenda Ayam & Ikan Nila Bakar • Warung Kuliner Karawang",
-    description: "Nikmati ayam & ikan nila bakar sambal cobek di Saung Tenda Karawang. Harga berkisar Rp22.500 - 33.500. Pesan langsung via WhatsApp!", 
-    image: "./assets/facade.jpeg", // GANTI dengan foto keren (1200x630px)
-    url: "https://saungtendakarawang.pages.dev", 
-    type: "website",
-    locale: "id_ID"
+    title: 'CCTV Murah ADFU Shop • Pemasangan & Service CCTV Bekasi',
+    description: 'Spesialis pemasangan dan service CCTV rumah, toko, dan kantor di Bekasi. CCTV jernih, rapi, dan bisa dipantau dari HP. Konsultasi via WhatsApp.',
+    image: './assets/cctvmurahadfushop-hero.jpeg', // foto toko / hasil pemasangan CCTV (1200x630)
+    url: 'https://cctvmurahadfushop.pages.dev', // ganti sesuai domain
+    type: 'website',
+    locale: 'id_ID',
   },
 
-  // Visual Assets
   assets: {
-    heroBackground: "./assets/facade.jpeg", // Background hero - foto saung/makanan (1920x1080px atau 16:9)
+    heroBackground: './assets/cctvmurahadfushop-hero.jpeg', // Background hero - foto saung/makanan (1920x1080px atau 16:9)
     // Jika file tidak ada, akan menggunakan gradient default
   },
 
   // Additional Business Details
   services: {
-    dineIn: true,
-    takeaway: true,
-    delivery: true, // Jika ada layanan delivery
-    paymentMethods: ["Cash", "QRIS", "GoPay", "OVO", "ShopeePay"]
+    paymentMethods: ['Cash', 'Transfer', 'QRIS'],
   },
 
   // Location Details
   location: {
-    landmark: "Dekat Panatayudha 1, Karawang Barat",
-    parking: "Parkir motor & mobil tersedia di depan warung"
-  }
+    landmark: 'Bumi Cahaya Residence, Blok A13 No. 9C Sindangmulya, Kecamatan Cibarusah Kabupaten Bekasi, Jawa Barat 17530',
+  },
 };
 
 // Make data available globally
