@@ -8,17 +8,18 @@
 const umkmData = {
   // Business Information
   business: {
-    name: 'CCTV Murah AdfuShop Bekasi',
+    name: 'AdfuShop CCTV dan Laptop',
     tagline: 'Solusi CCTV Murah & Setting Pemasangan di Bekasi',
     openingHours: 'Senin – Sabtu: 10:00 – 16:00',
-    priceRange: 'Harga mulai dari paket CCTV terjangkau',
+    priceRange: 'Harga murah untuk paket CCTV terjangkau',
     advantages: [
-      'Kamera CCTV & perangkat keamanan berkualitas',
-      'Layanan instalasi & setting perekaman',
-      'Support teknis & bantuan konfigurasi',
-      'Solusi pengawasan untuk rumah, toko, & usaha',
+      'Perangkat CCTV berkualitas dari berbagai merk terkenal',
+      'Layanan instalasi & setting CCTV profesional',
+      'Support teknis & konfigurasi hingga monitoring lewat HP',
+      'Penjualan laptop bekas berkualitas & perangkat komputer lain',
+      'Solusi keamanan untuk rumah, toko, kantor, dan UMKM',
     ],
-    footerDescription: 'CCTVMurahAdfuShop adalah penyedia CCTV dan layanan pemasangan di Bekasi, siap membantu pengadaan kamera pengawas sampai setup penuh.',
+    footerDescription: 'AdfuShop CCTV & Laptop melayani penjualan, pemasangan, dan service CCTV di Bekasi serta menyediakan laptop bekas berkualitas. Solusi keamanan dan perangkat kerja dengan dukungan teknis berpengalaman.',
   },
 
   // Contact Information
@@ -26,24 +27,24 @@ const umkmData = {
     whatsapp: '6287776663940', // GANTI dengan nomor WhatsApp aktif
     whatsappMessage: 'Halo, saya mau info CCTV & jasa pemasangan.',
     whatsappCTAMessage: 'Halo, saya mau konsultasi soal paket CCTV murah & pemasangan.',
-    mapsUrl: 'https://maps.app.goo.gl/zUq2epgvVH6vijtGA',
+    mapsUrl: 'https://maps.app.goo.gl/iwubXzQJoVhpywVs9',
     mapsEmbedUrl:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8032.169135696881!2d107.08252249615602!3d-6.4116190622875235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699793f5a6a4fb%3A0xbcbceef13f6a7cdf!2sAdfushop%20Office!5e0!3m2!1sen!2sid!4v1770434346757!5m2!1sen!2sid',
-    address: 'Bumi Cahaya Residence, Blok A13 No. 9C Sindangmulya, Kecamatan Cibarusah Kabupaten Bekasi, Jawa Barat 17530',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2010271133827!2d107.11487389999999!3d-6.3680252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699ba34481cf33%3A0x1b8aa247412ba24b!2sAdfushop%20CCTV%20dan%20Laptop!5e0!3m2!1sen!2sid!4v1770437160804!5m2!1sen!2sid',
+    address: 'Sukadami, Cikarang Selatan, Bekasi Regency, West Java 17532',
   },
 
   // Gallery Images (1-3 images supported)
   gallery: [
     {
-      url: './assets/cctvmurahadfushop-0.jpeg',
-      alt: 'Toko CCTV Murah ADFU Shop di Cibarusah Bekasi',
-    },
-    {
-      url: './assets/cctvmurahadfushop-1.jpeg',
+      url: './assets/adfushopcctv-0.jpeg',
       alt: 'Contoh hasil pemasangan CCTV rumah dan toko oleh ADFU Shop',
     },
     {
-      url: './assets/cctvmurahadfushop-2.jpeg',
+      url: './assets/adfushopcctv-1.jpeg',
+      alt: 'Toko CCTV Murah ADFU Shop di Cibarusah Bekasi',
+    },
+    {
+      url: './assets/adfushopcctv-2.jpeg',
       alt: 'Perangkat CCTV dan aksesoris keamanan di ADFU Shop',
     },
   ],
@@ -78,16 +79,16 @@ const umkmData = {
 
   // Visual Assets
   meta: {
-    title: 'CCTV Murah ADFU Shop • Pemasangan & Service CCTV Bekasi',
+    title: 'CCTV dan Laptop ADFU Shop • Pemasangan & Service CCTV Bekasi',
     description: 'Spesialis pemasangan dan service CCTV rumah, toko, dan kantor di Bekasi. CCTV jernih, rapi, dan bisa dipantau dari HP. Konsultasi via WhatsApp.',
-    image: './assets/cctvmurahadfushop-hero.jpeg', // foto toko / hasil pemasangan CCTV (1200x630)
-    url: 'https://cctvmurahadfushop.pages.dev', // ganti sesuai domain
+    image: './assets/adfushopcctv-hero.jpeg', // foto toko / hasil pemasangan CCTV (1200x630)
+    url: 'https://adfushopcctv.pages.dev', // ganti sesuai domain
     type: 'website',
     locale: 'id_ID',
   },
 
   assets: {
-    heroBackground: './assets/cctvmurahadfushop-hero.jpeg', // Background hero - foto saung/makanan (1920x1080px atau 16:9)
+    heroBackground: './assets/adfushopcctv-hero.jpeg', // Background hero - foto saung/makanan (1920x1080px atau 16:9)
     // Jika file tidak ada, akan menggunakan gradient default
   },
 
@@ -97,9 +98,9 @@ const umkmData = {
   },
 
   // Location Details
-  location: {
-    landmark: 'Bumi Cahaya Residence, Blok A13 No. 9C Sindangmulya, Kecamatan Cibarusah Kabupaten Bekasi, Jawa Barat 17530',
-  },
+  // location: {
+  //   landmark: 'Bumi Cahaya Residence, Blok A13 No. 9C Sindangmulya, Kecamatan Cibarusah Kabupaten Bekasi, Jawa Barat 17530',
+  // },
 };
 
 // Make data available globally
